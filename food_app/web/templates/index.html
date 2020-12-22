@@ -1,11 +1,18 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
 <body>
-    
+    <ul>
+        {% for item in item_list %}
+        
+        <li>{{item.item_name}}</li>
+
+        {% endfor %}
+
+    </ul>
 </body>
 </html>

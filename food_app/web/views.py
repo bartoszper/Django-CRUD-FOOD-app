@@ -6,7 +6,7 @@ from .models import Item
 
 def index(request):
     item_list = Item.objects.all()
-    return HttpResponse(item_list)
+    return render(request, 'index.html',{'item_list':item_list})
 
 def item(request):
     return HttpResponse('This is item view')
