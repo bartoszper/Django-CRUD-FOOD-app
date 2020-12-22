@@ -9,7 +9,7 @@
     <ul>
         {% for item in item_list %}
         
-        <li><h3>{{item.item_name}}</h3></li>
+        <li><h3><a href="{% url 'web:detail' item.id %}">{{item.item_name}}</a></h3></li>
 
         {% endfor %}
 
