@@ -11,6 +11,10 @@ def index(request):
 def item(request):
     return HttpResponse('This is item view')
 
-def detail(request):
-    return 
+def detail(request, item_id):
+    item = Item.objects.get(pk=item_id)
+    context = {
+        "item":item
+    }
+    return render(request, 'detail.html', context)
 
