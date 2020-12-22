@@ -11,3 +11,6 @@ def index(request):
 def item(request):
     return HttpResponse('This is item view')
 
+def detail(request):
+    return 
+
