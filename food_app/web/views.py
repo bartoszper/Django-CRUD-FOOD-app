@@ -18,3 +18,6 @@ def detail(request, item_id):
     }
     return render(request, 'detail.html', context)
 
+def create_item(request):
+    
+
