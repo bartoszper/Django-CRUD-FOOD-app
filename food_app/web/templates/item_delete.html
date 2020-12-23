@@ -1,6 +1,13 @@
 {% extends 'base.html' %}
 
 {% block body %}
-<h2>Do you want to delete {{item.item_name}}?</h2>
-<button type="submit" class="btn btn-danger">Delete</button>
+<form  method="post">
+
+    {% csrf_token %}
+
+    <h2>Do you want to delete {{item.item_name}}?</h2>
+    <button type="submit" class="btn btn-danger">Delete</button>
+    
+
+</form>
 {% endblock %}
