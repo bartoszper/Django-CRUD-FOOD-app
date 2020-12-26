@@ -20,3 +20,6 @@ def register(request):
 def logout(request):
     auth.logout(request)
     return redirect('food:index')
+
+def profilepage(request):
+    return render(request, 'profile.html',{})
