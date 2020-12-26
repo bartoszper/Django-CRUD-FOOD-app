@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect
 from django.contrib import messages
 from .forms import RegisterForm
 from django.contrib import auth
+from django.contrib.auth.decorators import login_required
 
 
 def register(request):
@@ -21,5 +22,6 @@ def logout(request):
     auth.logout(request)
     return redirect('food:index')
 
+@login_required
 def profilepage(request):
     return render(request, 'profile.html',{})
