@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect
 from django.contrib import messages
 from .forms import RegisterForm
+from django.contrib import auth
 
 
 def register(request):
@@ -14,3 +15,8 @@ def register(request):
     else:
         form = RegisterForm()
     return render(request, 'register.html', {'form':form})
+
+
+def logout(request):
+    auth.logout(request)
+    return redirect('food:index')
